@@ -8,12 +8,14 @@ import {
   MDBMask,
   MDBContainer,
 } from "mdbreact";
-import slide1 from "./images/slide1.jpg";
-import slide2 from "./images/slide2.jpg";
-import slide3 from "./images/slide3.jpg";
+import slide1 from "../images/slide1.jpg";
+import slide2 from "../images/slide2.jpg";
+import slide3 from "../images/slide3.jpg";
 
 const CarouselPage = () => {
+  
   return (
+
     <MDBContainer fluid className="p-0">
       <MDBCarousel activeItem={1} length={3} className="z-depth-1">
         <MDBCarouselInner>
@@ -53,6 +55,7 @@ const CarouselPage = () => {
         </MDBCarouselInner>
       </MDBCarousel>
     </MDBContainer>
+
   );
 };
 

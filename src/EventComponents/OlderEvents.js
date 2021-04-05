@@ -8,20 +8,16 @@ import {
   MDBCol,
   MDBContainer,
 } from "mdbreact";
-import UiVisual from "./images/UiVisual.jpg";
-import Orientaion from "./images/Orientation.jpg";
-import Admission from "./images/Admission.jpg";
+import UiVisual from "../images/UiVisual.jpg";
+import Orientaion from "../images/Orientation.jpg";
+import Admission from "../images/Admission.jpg";
 
-const RecentEvent = () => {
-    const Color = { Color: "#74C043" };
+const OlderEvents = () => {
   return (
-    <div className="mt-4">
+    <div className="my-4">
       <MDBContainer>
-        <h1>
-          Our Recent <span style={{ color: "#74C043" }}>Events</span>
-        </h1>
-        <hr className="w-25" />
         <MDBRow>
+            
           <MDBCol md="4">
             <MDBCard style={{ width: "22rem" }} className="mx-auto event-card">
               <MDBCardImage
@@ -69,10 +65,11 @@ const RecentEvent = () => {
               </MDBCardBody>
             </MDBCard>
           </MDBCol>
+      
         </MDBRow>
       </MDBContainer>
     </div>
   );
 };
 
-export default RecentEvent;
+export default OlderEvents;

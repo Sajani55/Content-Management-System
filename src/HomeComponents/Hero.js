@@ -1,5 +1,7 @@
 import { MDBCol, MDBContainer, MDBRow } from "mdbreact";
-import hero_banner from './images/hck-logo.png'
+import hero_banner from '../images/hck-logo.png'
+import React from "react";
+
 
 const Hero = () => {
   return (

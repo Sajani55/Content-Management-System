@@ -1,5 +1,5 @@
 import { MDBCol, MDBContainer, MDBRow } from "mdbreact";
-import univ_banner from "./images/wlv.jpg";
+import univ_banner from "../images/wlv.jpg";
 const UnivBanner = () => {
   return (
     <div>

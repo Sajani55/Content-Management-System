@@ -10,7 +10,7 @@ import {
   MDBNavLink,
   MDBIcon,
 } from "mdbreact";
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, Link } from "react-router-dom";
 
 class Navbar extends React.Component {
   constructor(props) {
@@ -32,7 +32,7 @@ class Navbar extends React.Component {
  
     return (
       <div>
-        <Router>
+      
           <header>
             <MDBNavbar
               color="red"
@@ -48,23 +48,31 @@ class Navbar extends React.Component {
               <MDBNavbarToggler onClick={this.onClick} />
               <MDBCollapse isOpen={this.state.collapse} navbar>
                 <MDBNavbarNav right className="text-center">
+
                   <MDBNavItem >
-                    <MDBNavLink to="#">Home</MDBNavLink>
+                    <MDBNavLink to="/">Home</MDBNavLink>
                   </MDBNavItem>
+
                   <MDBNavItem>
-                    <MDBNavLink to="#">About</MDBNavLink>
+                    <MDBNavLink to="/About">About</MDBNavLink>
                   </MDBNavItem>
+
                   <MDBNavItem>
-                    <MDBNavLink to="#">Contact</MDBNavLink>
+                    <MDBNavLink to="/Contact">Contact</MDBNavLink>
                   </MDBNavItem>
+
                   <MDBNavItem>
-                    <MDBNavLink to="#">Events</MDBNavLink>
+                    <MDBNavLink to="/Events">Events</MDBNavLink>
                   </MDBNavItem>
+
+                  <MDBNavItem>
+                    <MDBNavLink to="/Gallery">Gallery</MDBNavLink>
+                  </MDBNavItem>
+
                 </MDBNavbarNav>
               </MDBCollapse>
             </MDBNavbar>
           </header>
-        </Router>
       </div>
     );
   }
