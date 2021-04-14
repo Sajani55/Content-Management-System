@@ -16,9 +16,9 @@ const CarouselPage = () => {
   
   return (
 
-    <MDBContainer fluid className="p-0">
+    <MDBContainer fluid className="p-0 ">
       <MDBCarousel activeItem={1} length={3} className="z-depth-1">
-        <MDBCarouselInner>
+        <MDBCarouselInner className="carousell">
           <MDBCarouselItem itemId="1">
             <MDBView>
               <img className="d-block w-100" src={slide1} alt="First slide" />

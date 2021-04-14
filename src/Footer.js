@@ -5,11 +5,11 @@ import hero_banner from './images/hck-logo.png'
 
 const Footer = () => {
   return (
-    <MDBFooter color="red" className="font-small pt-4 mt-4">
+    <MDBFooter color="green" className="font-small pt-4 mt-4">
       <MDBContainer fluid className="text-center text-md-left">
         <MDBRow>
           
-          <MDBCol md="4">
+          <MDBCol md="4" className="text-left">
             <h5 className="title ">About Herald College</h5>
             <p>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit.
@@ -20,7 +20,7 @@ const Footer = () => {
           </MDBCol>
 
           <MDBCol md="4" className="text-center">
-            <h6 className="title">Important Links</h6>
+            <h5 className="title">Important Links</h5>
             <ul>
               <li className="list-unstyled">
                 <a href="#!">About</a>

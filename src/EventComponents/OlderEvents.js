@@ -7,6 +7,7 @@ import {
   MDBRow,
   MDBCol,
   MDBContainer,
+  MDBBtn,
 } from "mdbreact";
 import UiVisual from "../images/UiVisual.jpg";
 import Orientaion from "../images/Orientation.jpg";
@@ -17,7 +18,6 @@ const OlderEvents = () => {
     <div className="my-4">
       <MDBContainer>
         <MDBRow>
-            
           <MDBCol md="4">
             <MDBCard style={{ width: "22rem" }} className="mx-auto event-card">
               <MDBCardImage
@@ -30,10 +30,18 @@ const OlderEvents = () => {
                   Some quick example text to build on the card title and make up
                   the bulk of the card&apos;s content.
                 </MDBCardText>
+                <div className="text-right">
+                  <MDBBtn
+                    className="text-right rounded"
+                    color="success"
+                    href="#"
+                  >
+                    Read More
+                  </MDBBtn>
+                </div>
               </MDBCardBody>
             </MDBCard>
           </MDBCol>
-
           <MDBCol md="4">
             <MDBCard style={{ width: "22rem" }} className="mx-auto event-card">
               <MDBCardImage
@@ -46,10 +54,18 @@ const OlderEvents = () => {
                   Some quick example text to build on the card title and make up
                   the bulk of the card&apos;s content.
                 </MDBCardText>
+                <div className="text-right">
+                  <MDBBtn
+                    className="text-right rounded"
+                    color="success"
+                    href="#"
+                  >
+                    Read More
+                  </MDBBtn>
+                </div>
               </MDBCardBody>
             </MDBCard>
           </MDBCol>
-
           <MDBCol md="4">
             <MDBCard style={{ width: "22rem" }} className="mx-auto event-card">
               <MDBCardImage
@@ -62,10 +78,18 @@ const OlderEvents = () => {
                   Some quick example text to build on the card title and make up
                   the bulk of the card&apos;s content.
                 </MDBCardText>
+                <div className="text-right">
+                  <MDBBtn
+                    className="text-right rounded"
+                    color="success"
+                    href="#"
+                  >
+                    Read More
+                  </MDBBtn>
+                </div>
               </MDBCardBody>
             </MDBCard>
           </MDBCol>
-      
         </MDBRow>
       </MDBContainer>
     </div>
