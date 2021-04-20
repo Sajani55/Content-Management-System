@@ -1,3 +1,5 @@
+import {Link} from "react-router-dom";
+
 import {
   MDBCard,
   MDBCardBody,
@@ -10,7 +12,7 @@ import {
   MDBBtn,
 } from "mdbreact";
 import UiVisual from "../images/UiVisual.jpg";
-import Orientaion from "../images/Orientation.jpg";
+// import Orientaion from "../images/Orientation.jpg";
 import Admission from "../images/Admission.jpg";
 
 const RecentEvent = () => {
@@ -19,12 +21,13 @@ const RecentEvent = () => {
     <div className="mt-4">
       <MDBContainer>
         <MDBRow>
-          <MDBCol md="12"  className="text-center">
+          <MDBCol md="12" className="text-center">
             <h1>
               Browse Recent <span style={Color}>Events</span>
             </h1>
             <hr className="w-25 mx-auto" />
           </MDBCol>
+
           <MDBCol md="4">
             <MDBCard
               style={{ width: "22rem" }}
@@ -41,15 +44,15 @@ const RecentEvent = () => {
                   Some quick example text to build on the card title and make up
                   the bulk of the card&apos;s content.
                 </MDBCardText>
+                <Link to="/SingleEvent">
                 <div className="text-right">
-                  <MDBBtn
-                    className="text-right rounded"
-                    color="success"
-                    to="/SingleEvent"
-                  >
-                    Read More
-                  </MDBBtn>
+                  
+                    <MDBBtn className="text-right rounded" color="success">
+                      Read More
+                    </MDBBtn>
+                  
                 </div>
+                </Link>
               </MDBCardBody>
             </MDBCard>
           </MDBCol>
