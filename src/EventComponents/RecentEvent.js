@@ -12,19 +12,41 @@ import {
 import UiVisual from "../images/UiVisual.jpg";
 import Orientaion from "../images/Orientation.jpg";
 import Admission from "../images/Admission.jpg";
+import React from 'react';
+import {Link} from 'react-router-dom'
 
-const RecentEvent = () => {
+class RecentEvent extends React.Component {
+  constructor(){
+    super()
+    this.state = {
+        events: []
+    }
+}
+
+componentWillMount(){
+    fetch('http://localhost:1337/events').then((response)=>{
+        if(response.status >= 400){
+            throw new Error("Bad Response From Server");
+        }
+        return response.json();
+    }).then((events)=>{
+        this.setState({events: events});
+    })
+}
+
+  render(){
   const Color = { color: "#74C043" };
   return (
-    <div className="mt-4">
+    <div className="mt-4">{
+      this.state.events.map(({id, eventtitle, eventcontent, eventimage})=>(
       <MDBContainer>
         <MDBRow>
-          <MDBCol md="12"  className="text-center">
+          {/* <MDBCol md="12"  className="text-center">
             <h1>
               Browse Recent <span style={Color}>Events</span>
             </h1>
             <hr className="w-25 mx-auto" />
-          </MDBCol>
+          </MDBCol> */}
           <MDBCol md="4">
             <MDBCard
               style={{ width: "22rem" }}
@@ -33,88 +55,32 @@ const RecentEvent = () => {
             >
               <MDBCardImage
                 className="img-fluid event-card-image"
-                src={UiVisual}
+                src={`http://localhost:1337${eventimage.url}`}
               />
               <MDBCardBody>
-                <MDBCardTitle>Orientation 2021</MDBCardTitle>
+                <MDBCardTitle>{eventtitle}</MDBCardTitle>
                 <MDBCardText>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card&apos;s content.
+                {eventcontent}
                 </MDBCardText>
                 <div className="text-right">
-                  <MDBBtn
-                    className="text-right rounded"
-                    color="success"
-                    to="/SingleEvent"
-                  >
-                    Read More
-                  </MDBBtn>
-                </div>
-              </MDBCardBody>
-            </MDBCard>
-          </MDBCol>
-
-          <MDBCol md="4">
-            <MDBCard
-              style={{ width: "22rem" }}
-              className="mx-auto event-card"
-              border="success"
-            >
-              <MDBCardImage
-                className="img-fluid event-card-image"
-                src={Admission}
-              />
-              <MDBCardBody>
-                <MDBCardTitle>Summer Admission</MDBCardTitle>
-                <MDBCardText>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card&apos;s content.
-                </MDBCardText>
-                <div className="text-right">
-                  <MDBBtn
+                <Link to = {`/single/${id}`}><MDBBtn
                     className="text-right rounded"
                     color="success"
                     href="#"
                   >
                     Read More
-                  </MDBBtn>
-                </div>
-              </MDBCardBody>
-            </MDBCard>
-          </MDBCol>
-
-          <MDBCol md="4">
-            <MDBCard
-              style={{ width: "22rem" }}
-              className="mx-auto event-card"
-              border="success"
-            >
-              <MDBCardImage
-                className="img-fluid event-card-image"
-                src={Admission}
-              />
-              <MDBCardBody>
-                <MDBCardTitle>Summer Admission</MDBCardTitle>
-                <MDBCardText>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </MDBCardText>
-                <div className="text-right">
-                  <MDBBtn
-                    className="text-right rounded"
-                    color="success"
-                    href="#"
-                  >
-                    Read More
-                  </MDBBtn>
+                  </MDBBtn></Link>
                 </div>
               </MDBCardBody>
             </MDBCard>
           </MDBCol>
         </MDBRow>
       </MDBContainer>
+      ))
+      }
     </div>
   );
+  }
 };
 
 export default RecentEvent;

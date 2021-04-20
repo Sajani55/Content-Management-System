@@ -1,24 +1,24 @@
 import React from 'react';
 import fetch from 'isomorphic-fetch';
-import GalleryListItem from './gallerylistitem';
+import EventListItem from './eventlistitem';
 
-class Gallery extends React.Component{
+class EventList extends React.Component{
 
     constructor(){
         super()
         this.state = {
-            gallery: []
+            events: []
         }
     }
 
     componentWillMount(){
-        fetch('http://localhost:1337/galleries').then((response)=>{
+        fetch('http://localhost:1337/events').then((response)=>{
             if(response.status >= 400){
                 throw new Error("Bad Response From Server");
             }
             return response.json();
-        }).then((gallery)=>{
-            this.setState({gallery: gallery});
+        }).then((events)=>{
+            this.setState({events: events});
         })
     }
 
@@ -26,10 +26,11 @@ class Gallery extends React.Component{
         return(
             <div>
                 {
-                    this.state.gallery.map(({id,title,pictures})=>(
+                    this.state.events.map(({id, eventtitle, eventcontent, eventimage})=>(
                         <div className="container">
                             <div className="row">
-                                <GalleryListItem key = {id} title = {title} pictures = {pictures} />
+                                <EventListItem key = {id} eventid = {id} eventtitle = {eventtitle} eventcontent = {eventcontent} eventimage = {eventimage} />
+                                
                             </div>
                         </div>
                     ))
@@ -39,4 +40,4 @@ class Gallery extends React.Component{
     }
 }
 
-export default Gallery
+export default EventList

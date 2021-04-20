@@ -6,6 +6,8 @@ import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import About from './About';
 import Contact from './Contact';
 import Gallery from './Gallery';
+import EventList from './EventComponents/eventlist'
+import SingleEvent from './EventComponents/singleeventt'
 
 function App() {
   return (
@@ -18,6 +20,10 @@ function App() {
         <Route path = "/About" exact component={About} />
         <Route path = "/Contact" exact component={Contact} />
         <Route path = "/Gallery" exact component={Gallery} />
+        <Route exact path="/test" component={EventList}></Route>
+        <Route exact path="/single/:postid" render={props=> (
+          <SingleEvent {...props} />
+        )}></Route>
         <Footer />
     </div>
     </Router>
