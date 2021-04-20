@@ -11,6 +11,8 @@ import {
 } from "mdbreact";
 import UiVisual from "../images/UiVisual.jpg";
 import RecentEvent from "./RecentEvent";
+import {Link} from "react-router-dom";
+
 
 const SingleEvent = () => {
   return (
@@ -34,11 +36,13 @@ const SingleEvent = () => {
               atque placeat accusamus, esse sint possimus nam consequuntur,
               laborum illum. In laboriosam tempora expedita perspiciatis.
             </MDBCardText>
-            <div className="text-right">
-                {/* <a href="">Home</a> */}
-                <MDBBtn color="success" className="rounded">Go Home</MDBBtn>
-
-            </div>
+            <Link to ="/">
+              <div className="text-right">
+                <MDBBtn color="success" className="rounded">
+                  Go Home
+                </MDBBtn>
+              </div>
+            </Link>
           </MDBCardBody>
         </MDBCard>
       </MDBCol>

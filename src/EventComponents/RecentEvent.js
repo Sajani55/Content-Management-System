@@ -1,3 +1,5 @@
+import {Link} from "react-router-dom";
+
 import {
   MDBCard,
   MDBCardBody,
@@ -10,10 +12,9 @@ import {
   MDBBtn,
 } from "mdbreact";
 import UiVisual from "../images/UiVisual.jpg";
-import Orientaion from "../images/Orientation.jpg";
+// import Orientaion from "../images/Orientation.jpg";
 import Admission from "../images/Admission.jpg";
 import React from 'react';
-import {Link} from 'react-router-dom'
 
 class RecentEvent extends React.Component {
   constructor(){
@@ -39,14 +40,6 @@ componentWillMount(){
   return (
     <div className="mt-4">{
       this.state.events.map(({id, eventtitle, eventcontent, eventimage})=>(
-      <MDBContainer>
-        <MDBRow>
-          {/* <MDBCol md="12"  className="text-center">
-            <h1>
-              Browse Recent <span style={Color}>Events</span>
-            </h1>
-            <hr className="w-25 mx-auto" />
-          </MDBCol> */}
           <MDBCol md="4">
             <MDBCard
               style={{ width: "22rem" }}
@@ -74,8 +67,6 @@ componentWillMount(){
               </MDBCardBody>
             </MDBCard>
           </MDBCol>
-        </MDBRow>
-      </MDBContainer>
       ))
       }
     </div>

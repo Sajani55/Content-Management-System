@@ -37,11 +37,6 @@ const Events = () => {
       <OlderEvents />
       <OlderEvents />
       <OlderEvents />
-      <MDBContainer>
-        <MDBRow>
-          <SingleEvent />
-        </MDBRow>
-      </MDBContainer>
     </>
   );
 };
