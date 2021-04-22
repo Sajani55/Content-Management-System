@@ -21,8 +21,23 @@
 height: 100px;
 }
 
+.event-card-content{
+  /* min-height: 5rem; */
+  height:6.8rem;
+  white-space: initial; 
+  width: auto; 
+  word-break:break-all ;
+  text-overflow: ellipsis;
+  overflow:hidden;
+  /* border: 1px solid black; */
+}
+
+.event-card-title{
+  height: 3rem;
+}
 .event-card{
   border-radius: 12px;
+width: auto;
 }
 
 .event-card-image{

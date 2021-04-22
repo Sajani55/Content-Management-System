@@ -1,17 +1,10 @@
 import {
-  MDBCard,
-  MDBCardBody,
-  MDBCardImage,
-  MDBCardTitle,
-  MDBCardText,
-  MDBRow,
-  MDBCol,
   MDBContainer,
   MDBBtn,
 } from "mdbreact";
-import OlderEvents from "./OlderEvents";
+
 import RecentEvent from "./RecentEvent";
-import SingleEvent from "./SingleEvent";
+
 
 const Events = () => {
   const styleObj = {
@@ -23,20 +16,15 @@ const Events = () => {
 
   return (
     <>
-      <div style={styleObj}>
-        <RecentEvent />
-      </div>
-      <MDBContainer>
+      <MDBContainer style={styleObj}>
         <div className="mt-5">
           <h1>
-            Browse Older <span style={greenColor}>Events</span>
+            Browse All <span style={greenColor}>Events</span>
           </h1>
           <hr className="w-25" />
         </div>
       </MDBContainer>
-      <OlderEvents />
-      <OlderEvents />
-      <OlderEvents />
+      <RecentEvent />
     </>
   );
 };

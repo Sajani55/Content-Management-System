@@ -1,5 +1,5 @@
-import {Link} from "react-router-dom";
-
+import { Link } from "react-router-dom";
+import React from "react";
 import {
   MDBCard,
   MDBCardBody,
@@ -11,67 +11,79 @@ import {
   MDBContainer,
   MDBBtn,
 } from "mdbreact";
-import UiVisual from "../images/UiVisual.jpg";
-// import Orientaion from "../images/Orientation.jpg";
-import Admission from "../images/Admission.jpg";
-import React from 'react';
+
+function refreshPage() {
+  window.location.reload(false);
+  window.scrollTo(0, 0);
+}
 
 class RecentEvent extends React.Component {
-  constructor(){
-    super()
+  constructor() {
+    super();
     this.state = {
-        events: []
-    }
-}
+      events: [],
+    };
+  }
 
-componentWillMount(){
-    fetch('http://localhost:1337/events').then((response)=>{
-        if(response.status >= 400){
-            throw new Error("Bad Response From Server");
+  componentWillMount() {
+    fetch("http://localhost:1337/events")
+      .then((response) => {
+        if (response.status >= 400) {
+          throw new Error("Bad Response From Server");
         }
         return response.json();
-    }).then((events)=>{
-        this.setState({events: events});
-    })
-}
-
-  render(){
-  const Color = { color: "#74C043" };
-  return (
-    <div className="mt-4">{
-      this.state.events.map(({id, eventtitle, eventcontent, eventimage})=>(
-          <MDBCol md="4">
-            <MDBCard
-              style={{ width: "22rem" }}
-              className="mx-auto event-card"
-              border="success"
-            >
-              <MDBCardImage
-                className="img-fluid event-card-image"
-                src={`http://localhost:1337${eventimage.url}`}
-              />
-              <MDBCardBody>
-                <MDBCardTitle>{eventtitle}</MDBCardTitle>
-                <MDBCardText>
-                {eventcontent}
-                </MDBCardText>
-                <div className="text-right">
-                <Link to = {`/single/${id}`}><MDBBtn
-                    className="text-right rounded"
-                    color="success"
-                    href="#"
-                  >
-                    Read More
-                  </MDBBtn></Link>
-                </div>
-              </MDBCardBody>
-            </MDBCard>
-          </MDBCol>
-      ))
-      }
-    </div>
-  );
+      })
+      .then((events) => {
+        this.setState({ events: events });
+      });
   }
-};
+
+  render() {
+    const Color = { color: "#74C043" };
+    return (
+      <div className="mt-4">
+        <MDBContainer>
+          <MDBRow>
+            {this.state.events.map(
+              ({ id, eventtitle, eventcontent, eventimage }) => (
+                <MDBCol md="4" sm="6">
+                  <MDBCard
+                    style={{ Height: "28rem" }}
+                    className="mx-auto event-card mt-4"
+                    border="success"
+                  >
+                    <MDBCardImage
+                      className="img-fluid event-card-image"
+                      src={`http://localhost:1337${eventimage.url}`}
+                    />
+                    <MDBCardBody>
+                      <MDBCardTitle className="event-card-title">
+                        {eventtitle}
+                      </MDBCardTitle>
+                      <MDBCardText className="event-card-content">
+                        {eventcontent}
+                      </MDBCardText>
+                      {/* button */}
+                      <div className="text-right" onClick={refreshPage}>
+                        <Link to={`/single/${id}`}>
+                          <MDBBtn
+                            className="text-right rounded"
+                            color="success"
+                          >
+                            Read More
+                          </MDBBtn>
+                        </Link>
+                      </div>
+                    </MDBCardBody>
+                  </MDBCard>
+                </MDBCol>
+              )
+            )}
+          </MDBRow>
+        </MDBContainer>
+      </div>
+    );
+  }
+}
 
 export default RecentEvent;

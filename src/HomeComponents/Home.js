@@ -10,7 +10,6 @@ const Home = () => {
       <Carousel />
       <Hero />
       <UinivBanner />
-      <RecentEvent />
     </div>
   );
 };
