@@ -1,8 +1,8 @@
 import Carousel from "./Carousel";
 import Hero from "./Hero";
 import UinivBanner from "./UnivBanner";
-import RecentEvent from "../EventComponents/RecentEvent";
-// import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
+import Course from "./Course";
+import Testimonial from "./Testimonial";
 
 const Home = () => {
   return (
@@ -10,6 +10,8 @@ const Home = () => {
       <Carousel />
       <Hero />
       <UinivBanner />
+      <Course />
+      <Testimonial />
     </div>
   );
 };

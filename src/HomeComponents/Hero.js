@@ -11,12 +11,12 @@ const Hero = () => {
               <img src={hero_banner} alt="" className="img-fluid"/>
           </MDBCol>
           <MDBCol md="6" className="mt-4">
-            <p>
+            <p className="text-justify">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad porro
               repellendus eaque enim veritatis ducimus qui quo expedita, ea vel
               recusandae, hic fuga? Molestiae voluptates quisquam exercitationem
               itaque magnam consequuntur.
-            </p>
+            </p> 
           </MDBCol>
         </MDBRow>
       </MDBContainer>

@@ -1,6 +1,5 @@
 import {
   MDBContainer,
-  MDBBtn,
 } from "mdbreact";
 
 import RecentEvent from "./RecentEvent";
@@ -19,9 +18,8 @@ const Events = () => {
       <MDBContainer style={styleObj}>
         <div className="mt-5">
           <h1>
-            Browse All <span style={greenColor}>Events</span>
+            Browse All <br /> <span style={greenColor}>Events</span>
           </h1>
-          <hr className="w-25" />
         </div>
       </MDBContainer>
       <RecentEvent />

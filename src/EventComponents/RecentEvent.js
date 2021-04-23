@@ -60,7 +60,7 @@ class RecentEvent extends React.Component {
                       <MDBCardTitle className="event-card-title">
                         {eventtitle}
                       </MDBCardTitle>
-                      <MDBCardText className="event-card-content">
+                      <MDBCardText className="event-card-content text-justify">
                         {eventcontent}
                       </MDBCardText>
                       {/* button */}

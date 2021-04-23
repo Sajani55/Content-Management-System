@@ -6,8 +6,7 @@ const UnivBanner = () => {
       <MDBContainer>
         <MDBRow className="mt-4">
           <MDBCol md="12" className="text-center">
-            <h1>Our <span style={{ color: "#74C043" }}>University</span> Partner</h1>
-            <hr className="w-25 mx-auto" />
+            <h1>Our <span style={{ color: "#74C043" }}>University</span> <br /> Partner</h1>
           </MDBCol>
           <MDBCol md="12" className="text-center">
             <img src={univ_banner} alt="" />

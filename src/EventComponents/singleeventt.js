@@ -43,6 +43,9 @@ class SingleEvent extends React.Component {
       marginTop: "7rem",
       marginBottom: "2rem",
     };
+    const greenColor = {
+      color: "#74C043",
+    };
     return (
       <>
         <MDBContainer>
@@ -51,8 +54,7 @@ class SingleEvent extends React.Component {
               <h2>
                 Read More about
                 <b>
-                  {" "}
-                  <br /> {eventtitle}{" "}
+                  <br /> {eventtitle}
                 </b>
               </h2>
             </MDBCol>
@@ -68,7 +70,7 @@ class SingleEvent extends React.Component {
                   <MDBCardTitle>
                     <h1>{eventtitle}</h1>
                   </MDBCardTitle>
-                  <MDBCardText>{eventcontent}</MDBCardText>
+                  <MDBCardText className="text-justify">{eventcontent}</MDBCardText>
                   <Link to="/">
                     <div className="text-right">
                       <MDBBtn color="success" className="rounded">
@@ -81,7 +83,10 @@ class SingleEvent extends React.Component {
             </MDBCol>
             <MDBCol md="12" className="mt-5">
               <h2>
-                See More <br /> <b> Events</b>
+                See More <br />
+                <b>
+                  <span style={greenColor}> Events </span>
+                </b>
               </h2>
             </MDBCol>
           </MDBRow>

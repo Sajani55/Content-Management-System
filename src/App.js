@@ -1,17 +1,17 @@
+import React, {useState, useEffect} from 'react';
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
-
-import Footer from './Footer';
+import Navbar from './GlobalComponents/Navbar';
+import Footer from './GlobalComponents/Footer';
 import Home from './HomeComponents/Home';
-import Navbar from './Navbar';
+import About from './AboutComponents/About';
 import Events from './EventComponents/Events';
-import About from './About';
-import Contact from './Contact';
-import Gallery from './Gallery';
 import EventList from './EventComponents/eventlist'
 import SingleEvent from './EventComponents/singleeventt'
+import Contact from './Contact';
+import Gallery from './Gallery';
 
 
-function App() {
+const App=() => {
   return (
     <Router>
     <div className="App">

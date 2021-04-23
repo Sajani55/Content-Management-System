@@ -1,9 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 * {
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
-  font-family: Quicksand;
+  font-family: Poppins;
 }
 
 /* p{
@@ -56,3 +56,21 @@ width: auto;
 .carousell img{
   height:95vh;
 }
+
+.courseImg img{
+  height:400px;
+}
+
+
+/* .testimonial-bg{
+  background: url("images/testimonal.png");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  background-size: 500px 500px;
+background-opacity: 45%;
+} */
+

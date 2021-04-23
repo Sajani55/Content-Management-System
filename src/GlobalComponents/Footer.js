@@ -1,7 +1,7 @@
 import React from "react";
-import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
+import { MDBCol, MDBContainer, MDBRow, MDBFooter,MDBNavLink } from "mdbreact";
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
-import hero_banner from './images/hck-logo.png'
+import hero_banner from '../images/hck-logo.png'
 
 const Footer = () => {
   return (
@@ -11,7 +11,7 @@ const Footer = () => {
           
           <MDBCol md="4" className="text-left">
             <h5 className="title ">About Herald College</h5>
-            <p>
+            <p className="text-justify">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit.
               Provident, voluptatum, consequatur laboriosam eveniet natus iure
               laborum officia excepturi ut beatae rem. At nobis maiores dolores
@@ -21,20 +21,13 @@ const Footer = () => {
 
           <MDBCol md="4" className="text-center">
             <h5 className="title">Important Links</h5>
-            <ul>
-              <li className="list-unstyled">
-                <a href="#!">About</a>
-              </li>
-              <li className="list-unstyled">
-                <a href="#!">Contact</a>
-              </li>
-              <li className="list-unstyled">
-                <a href="#!">Gallery</a>
-              </li>
-              <li className="list-unstyled">
-                <a href="#!">Home</a>
-              </li>
-            </ul>
+            
+              <MDBNavLink className="p-1" to="/About">About</MDBNavLink>
+              <MDBNavLink className="p-1" to="/Contact">Contact</MDBNavLink>
+              <MDBNavLink className="p-1" to="/Events">Events</MDBNavLink>
+              <MDBNavLink className="p-1" to="/Gallery">Gallery</MDBNavLink>
+              <MDBNavLink className="p-1" to="/">Home</MDBNavLink>
+           
           </MDBCol>
           
           <MDBCol md="4" className=" my-3 text-center footer-HCK-logo">
