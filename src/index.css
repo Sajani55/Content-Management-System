@@ -62,15 +62,16 @@ width: auto;
 }
 
 
-/* .testimonial-bg{
-  background: url("images/testimonal.png");
+/* .gallery-page{
+  background: url("images/camera.png");
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   width: 100%;
-  background-size: 500px 500px;
-background-opacity: 45%;
+  background-size: 500px 500px; */
+  /* opacity: .5;
+
 } */
 
