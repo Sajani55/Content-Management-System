@@ -9,6 +9,8 @@ import EventList from "./EventComponents/eventlist";
 import SingleEvent from "./EventComponents/singleeventt";
 import Contact from "./Contact";
 import Gallery from "./GalleryComponents/GalleryImages";
+import Gallerytest from "./Backend Test/Gallery";
+import Testimonialstest from "./Backend Test/Testimonials";
 import SimpleReactLightbox from "simple-react-lightbox";
 
 const App = () => {
@@ -23,6 +25,8 @@ const App = () => {
         <Route path="/Contact" exact component={Contact} />
         <SimpleReactLightbox>
           <Route path="/Gallery" exact component={Gallery} />
+          <Route path="/Gallerytest" exact component={Gallerytest} />
+          <Route path="/Testimonialstest" exact component={Testimonialstest} />
         </SimpleReactLightbox>
         <Route exact path="/test" component={EventList}></Route>
         <Route
