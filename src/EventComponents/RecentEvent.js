@@ -40,6 +40,9 @@ class RecentEvent extends React.Component {
 
   render() {
     const Color = { color: "#74C043" };
+    function truncate(string, n) {
+      return string?.length > n ? string.substr(0, n - 1) + " . . ." : string;
+    }
     return (
       <div className="mt-4">
         <MDBContainer>
@@ -61,7 +64,7 @@ class RecentEvent extends React.Component {
                         {eventtitle}
                       </MDBCardTitle>
                       <MDBCardText className="event-card-content text-justify">
-                        {eventcontent}
+                       {truncate (`${eventcontent}`,100) }  
                       </MDBCardText>
                       {/* button */}
                       <div className="text-right" onClick={refreshPage}>

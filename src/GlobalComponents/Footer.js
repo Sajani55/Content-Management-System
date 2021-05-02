@@ -30,7 +30,7 @@ const Footer = () => {
            
           </MDBCol>
           
-          <MDBCol md="4" className=" my-3 text-center footer-HCK-logo">
+          <MDBCol md="4" className=" my-auto text-center footer-HCK-logo">
             <img src={hero_banner} alt="" className="img-fluid"/>
           </MDBCol>
         </MDBRow>

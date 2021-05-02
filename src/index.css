@@ -22,15 +22,10 @@ height: 100px;
 }
 
 .event-card-content{
-  /* min-height: 5rem; */
+
   height:6.8rem;
-  white-space: initial; 
-  width: auto; 
-  word-break:break-all ;
-  text-overflow: ellipsis;
-  overflow:hidden;
-  /* border: 1px solid black; */
 }
+
 
 .event-card-title{
   height: 3rem;
@@ -61,17 +56,10 @@ width: auto;
   height:400px;
 }
 
+.gallery-image img{
+  max-height:14rem;
+  width:100%;
+  cursor:pointer;
+}
 
-/* .gallery-page{
-  background: url("images/camera.png");
-  background-repeat: no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  width: 100%;
-  background-size: 500px 500px; */
-  /* opacity: .5;
-
-} */
 

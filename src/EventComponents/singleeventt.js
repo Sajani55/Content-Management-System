@@ -70,7 +70,9 @@ class SingleEvent extends React.Component {
                   <MDBCardTitle>
                     <h1>{eventtitle}</h1>
                   </MDBCardTitle>
-                  <MDBCardText className="text-justify">{eventcontent}</MDBCardText>
+                  <MDBCardText className="text-justify">
+                    {eventcontent}
+                  </MDBCardText>
                   <Link to="/">
                     <div className="text-right">
                       <MDBBtn color="success" className="rounded">
