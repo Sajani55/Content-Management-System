@@ -11,8 +11,6 @@ To test, contribute or just see what we did follow few easy steps:
 - `yarn run remove-demo` (or `npm run remove-demo`) removes demo app pages
 - enjoy!
 
-## Bugs
-If you want to report a bug or submit your idea feel fre to open an issue
 
 Before you report a bug, please take your time to find if an issue hasn't been reported yet
 
