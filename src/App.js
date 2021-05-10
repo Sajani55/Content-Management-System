@@ -6,6 +6,7 @@ import Home from "./HomeComponents/Home";
 import About from "./AboutComponents/About";
 import Events from "./EventComponents/Events";
 import SingleEvent from "./EventComponents/singleeventt";
+import SingleCourse from "./CourseComponents/SingleCourse";
 import Contact from "./Contact";
 import Gallery from "./GalleryComponents/Gallery";
 import SimpleReactLightbox from "simple-react-lightbox";
@@ -28,6 +29,7 @@ const App = () => {
           path="/single/:postid"
           render={(props) => <SingleEvent {...props} />}
         ></Route>
+        <Route path="/SingleCourse" exact component={SingleCourse}></Route>
         <Footer />
       </div>
     </Router>

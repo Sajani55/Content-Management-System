@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  MDBContainer,
   MDBNavbar,
   MDBNavbarBrand,
   MDBNavbarNav,
@@ -8,9 +7,8 @@ import {
   MDBCollapse,
   MDBNavItem,
   MDBNavLink,
-  MDBIcon,
 } from "mdbreact";
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import Logo from "../images/navlogo.jpg"
 
 class Navbar extends React.Component {
   constructor(props) {
@@ -26,23 +24,23 @@ class Navbar extends React.Component {
       collapse: !this.state.collapse,
     });
   }
+ 
 
   render() {
-    const logo = "https://www.collegenp.com/uploads/2018/02/herald-college.png";
-
+    const Color = { backgroundColor: "#74C042" };
     return (
       <div>
         <header>
           <MDBNavbar
-            color="green"
             dark
             expand="md"
             scrolling
             fixed="top"
             className="py-0 container mt-2 rounded"
+            style={Color}
           >
             <MDBNavbarBrand href="/" className="ml-4">
-              <img src={logo} alt="Herald College Logo" className="img-fluid hck-logo" />
+              <img src={Logo} alt="Herald College Logo" className="img-fluid hck-logo" />
             </MDBNavbarBrand>
             <MDBNavbarToggler onClick={this.onClick}  className="mr-4"/>
             <MDBCollapse isOpen={this.state.collapse} navbar>

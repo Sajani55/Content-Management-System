@@ -11,10 +11,10 @@
 } */
 
 .hck-logo{
-  width: 65px;
-  height: 60px;
-  background: white;
-  border-radius: 50%;
+  width: 70px;
+  height: 65px;
+  /* border:1px solid #ffffff; */
+  border-radius: 8px;
 
 }
 .hero-banner-img img{
@@ -42,9 +42,9 @@ width: auto;
 }
 .footer-HCK-logo img{
   height:100px;
-  width: 250px;
+  width: 160px;
   background: white;
-  border-radius: 12px;
+  border-radius: 15px;
 
 }
 
@@ -60,6 +60,12 @@ width: auto;
   max-height:14rem;
   width:100%;
   cursor:pointer;
+}
+
+.course-accordion{
+  background: #74C042;
+  color:#ffffff;
+  border-radius:8px;
 }
 
 

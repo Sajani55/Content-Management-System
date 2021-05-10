@@ -10,7 +10,7 @@ const Events = () => {
     marginTop: "6rem",
   };
   const greenColor = {
-    color: "#74C043",
+    color: "#74C042",
   };
 
   return (
