@@ -3,6 +3,7 @@ import {
 } from "mdbreact";
 
 import RecentEvent from "./RecentEvent";
+import EventHeader from "./EventHeader";
 
 
 const Events = () => {
@@ -16,6 +17,7 @@ const Events = () => {
   return (
     <>
       <MDBContainer style={styleObj}>
+        <EventHeader/>
         <div className="mt-5">
           <h1>
             Browse All <br /> <span style={greenColor}>Events</span>

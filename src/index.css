@@ -6,14 +6,9 @@
   font-family: Poppins;
 }
 
-/* p{
-  font-size: .7rem;
-} */
-
 .hck-logo{
-  width: 70px;
-  height: 65px;
-  /* border:1px solid #ffffff; */
+  width: 60px;
+  height: 50px;
   border-radius: 8px;
 
 }
@@ -68,4 +63,37 @@ width: auto;
   border-radius:8px;
 }
 
+.bor{
+  border: 1px solid black;
+}
+
+.about-img img{
+  width:40rem;
+}
+
+.contact-header img{
+  width:40rem;
+
+}
+.gallery-header img{
+  width:40rem;
+}
+
+.event-header img{
+  width:40rem;
+
+}
+.card {
+
+  transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
+    0.3s box-shadow,
+    0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
+
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
+}
 

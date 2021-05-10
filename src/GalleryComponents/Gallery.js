@@ -2,6 +2,7 @@ import React from "react";
 import fetch from "isomorphic-fetch";
 import { MDBCol, MDBContainer, MDBRow } from "mdbreact";
 import { SRLWrapper } from "simple-react-lightbox";
+import Header from "./GalleryHeader";
 
 class Gallery extends React.Component {
   constructor() {
@@ -33,6 +34,7 @@ class Gallery extends React.Component {
         <MDBContainer className="grey gallery-page lighten-4" fluid>
           <MDBContainer style={Margin}>
             <MDBRow className="mb-2">
+            <Header/>
               <MDBCol md="12">
                 <h1>
                   Moments at <br />{" "}

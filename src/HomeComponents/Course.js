@@ -45,6 +45,9 @@ class Course extends React.Component {
                 </ul>
               ))}
             </div>
+            <div className="text-right">
+              <button className="btn btn-outline-success rounded">View</button>
+            </div>
           </MDBCol>
 
           <MDBCol md="6" className="courseImg text-center">

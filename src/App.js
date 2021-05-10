@@ -7,7 +7,7 @@ import About from "./AboutComponents/About";
 import Events from "./EventComponents/Events";
 import SingleEvent from "./EventComponents/singleeventt";
 import SingleCourse from "./CourseComponents/SingleCourse";
-import Contact from "./Contact";
+import Contact from "./ContactComponents/Contact";
 import Gallery from "./GalleryComponents/Gallery";
 import SimpleReactLightbox from "simple-react-lightbox";
 

@@ -1,6 +1,5 @@
 import React from "react";
 import { MDBCol, MDBContainer, MDBRow, MDBFooter, MDBNavLink } from "mdbreact";
-// import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import hero_banner from "../images/ing.png";
 
 class Footer extends React.Component {
