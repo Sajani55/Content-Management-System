@@ -33,12 +33,6 @@ class Footer extends React.Component {
               <MDBCol md="4" className="text-left">
                 <h5 className="title ">About Herald College</h5>
                 <p className="text-justify">{text}</p>
-                Herald College Kathmandu provides the best UK university
-                education at most affordable fees.<br></br>It offers Bachelor
-                Degrees in IT and Business in direct partnership with the
-                University of Wolverhampton, UK.<br></br> Programmes that Herald
-                College Kathmandu offers are flexible and have always aimed to
-                foster a broader based knowledge.<br></br>
               </MDBCol>
 
               <MDBCol md="4" className="text-center">
