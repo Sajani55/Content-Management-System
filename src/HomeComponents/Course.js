@@ -1,4 +1,4 @@
-import { MDBCol, MDBContainer, MDBRow } from "mdbreact";
+import { MDBCol, MDBContainer, MDBRow, MDBBtn } from "mdbreact";
 import React from "react";
 import StudyPng from "../images/study.png";
 import { Link } from "react-router-dom";
@@ -50,6 +50,7 @@ class Course extends React.Component {
                 </ul>
               ))}
             </div>
+
             <div className="text-right mt-4">
               {/* button for single course page */}
               <Link to="/SingleCourse">
@@ -60,6 +61,7 @@ class Course extends React.Component {
                   VIiew Course
                 </button>
               </Link>
+
             </div>
           </MDBCol>
           {/* image */}
