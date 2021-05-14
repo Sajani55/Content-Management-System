@@ -67,6 +67,11 @@ width: auto;
   border: 1px solid black;
 }
 
+.testimonial-text::first-letter{
+  font-size: 250%;
+  color: #74C042;
+}
+
 .about-img img{
   width:40rem;
 }

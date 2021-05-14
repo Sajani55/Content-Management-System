@@ -32,7 +32,7 @@ class Testimonial extends React.Component {
 
   render() {
     const CardStyle = {
-      height: "14rem",
+      minHeight: "16rem",
     };
 
     function truncate(string, n) {
@@ -52,7 +52,7 @@ class Testimonial extends React.Component {
                 <MDBCard style={CardStyle} className="text-justify">
                   <MDBCardBody>
                     <MDBRow>
-                      <MDBCol>{truncate(`${comments}`,300)}</MDBCol>
+                      <MDBCol className="testimonial-text">{truncate(`"${comments}`,300)}</MDBCol>
                     </MDBRow>
                   </MDBCardBody>
                   <MDBCardFooter text="grey" className="text-right">
