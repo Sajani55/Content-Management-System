@@ -1,6 +1,7 @@
-import { MDBCol, MDBContainer, MDBRow } from "mdbreact";
+import { MDBCol, MDBContainer, MDBRow, MDBBtn } from "mdbreact";
 import React from "react";
 import StudyPng from "../images/study.png";
+import { Link } from "react-router-dom";
 
 class Course extends React.Component {
   constructor() {
@@ -46,7 +47,14 @@ class Course extends React.Component {
               ))}
             </div>
             <div className="text-right">
-              <button className="btn btn-outline-success rounded">View</button>
+            <Link to='/SingleCourse'>
+              <MDBBtn
+                className="text-right rounded"
+                color="success"
+              >
+                Read More
+                          </MDBBtn>
+            </Link>
             </div>
           </MDBCol>
 
