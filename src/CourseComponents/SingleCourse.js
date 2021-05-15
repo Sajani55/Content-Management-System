@@ -1,5 +1,6 @@
 import { MDBCol, MDBContainer, MDBRow, MDBBtn } from "mdbreact";
 import { Link } from "react-router-dom";
+import React from "react";
 
 import {
   Accordion,
@@ -11,34 +12,51 @@ import {
 import "react-accessible-accordion/dist/fancy-example.css";
 import Image from "../images/testimonal.png";
 
-const SingleCourse = () => {
-  const Margin = { marginTop: "6rem" };
-  const Color = { color: "#74C043" };
+class SingleCourse extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      singlecourses: [],
+    };
+  }
 
-  return (
-    <>
+  componentWillMount() {
+    fetch("http://localhost:1337/singlecourses")
+      .then((response) => {
+        if (response.status >= 400) {
+          throw new Error("Bad Response From Server");
+        }
+        return response.json();
+      })
+      .then((singlecourses) => {
+        this.setState({ singlecourses: singlecourses });
+      });
+  }
+
+  render() {
+    const Margin = { marginTop: "6rem" };
+    const Color = { color: "#74C043" };
+    return (
       <MDBContainer style={Margin}>
+        {this.state.singlecourses.map(({ Heading, titlefirst, descfirst, titlesecond, descsecond, titlethird, descthird }) => (
         <MDBRow>
           {/* Accordion */}
           <MDBCol md="6" className="my-4">
             <h1 className="mb-4" style={Color}>
-              Bsc. Hons Computer Science
+              {Heading}
             </h1>
             <Accordion className="course-accordion">
               <AccordionItem>
                 <AccordionItemHeading>
                   {/* Heading */}
                   <AccordionItemButton>
-                    What harsh truths do you prefer to ignore?
+                    {titlefirst}
                   </AccordionItemButton>
                 </AccordionItemHeading>
                 {/* body */}
                 <AccordionItemPanel>
                   <p>
-                    Exercitation in fugiat est ut ad ea cupidatat ut in
-                    cupidatat occaecat ut occaecat consequat est minim minim
-                    esse tempor laborum consequat esse adipisicing eu
-                    reprehenderit enim.
+                   {descfirst}
                   </p>
                 </AccordionItemPanel>
               </AccordionItem>
@@ -46,14 +64,12 @@ const SingleCourse = () => {
               <AccordionItem>
                 <AccordionItemHeading>
                   <AccordionItemButton>
-                    Is free will real or just an illusion?
+                    {titlesecond}
                   </AccordionItemButton>
                 </AccordionItemHeading>
                 <AccordionItemPanel>
                   <p>
-                    In ad velit in ex nostrud dolore cupidatat consectetur ea in
-                    ut nostrud velit in irure cillum tempor laboris sed
-                    adipisicing eu esse duis nulla non.
+                  {descsecond}
                   </p>
                 </AccordionItemPanel>
               </AccordionItem>
@@ -61,15 +77,12 @@ const SingleCourse = () => {
               <AccordionItem>
                 <AccordionItemHeading>
                   <AccordionItemButton>
-                    What harsh truths do you prefer to ignore?
+                    {titlethird}
                   </AccordionItemButton>
                 </AccordionItemHeading>
                 <AccordionItemPanel>
                   <p>
-                    Exercitation in fugiat est ut ad ea cupidatat ut in
-                    cupidatat occaecat ut occaecat consequat est minim minim
-                    esse tempor laborum consequat esse adipisicing eu
-                    reprehenderit enim.
+                   {descthird}
                   </p>
                 </AccordionItemPanel>
               </AccordionItem>
@@ -80,7 +93,9 @@ const SingleCourse = () => {
             <img src={Image} className="img-fluid" alt="" />
           </MDBCol>
           {/* button back to home */}
-          <MDBCol md="12" className="text-right mt-4">
+        </MDBRow>
+        ))}
+            <MDBCol md="12" className="text-right mt-4">
             <Link to="/">
               <div className="text-right">
                 <MDBBtn color="success" className="rounded">
@@ -89,10 +104,9 @@ const SingleCourse = () => {
               </div>
             </Link>
           </MDBCol>
-        </MDBRow>
       </MDBContainer>
-    </>
-  );
-};
+    );
+  }
+}
 
 export default SingleCourse;

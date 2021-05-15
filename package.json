@@ -4,6 +4,7 @@
   "private": true,
   "// If You want to install mdbreact from our GitLab repository, please replace '5.0.1' with gitURL provided here ->": "git+https://oauth2:<YOUR-TOKEN-GOES-HERE>@git.mdbootstrap.com/mdb/react/re-pro.git",
   "dependencies": {
+    "axios": "^0.21.1",
     "google-map-react": "^2.1.9",
     "isomorphic-fetch": "^2.2.1",
     "mdbreact": "5.0.1",
