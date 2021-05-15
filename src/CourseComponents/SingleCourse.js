@@ -38,7 +38,7 @@ class SingleCourse extends React.Component {
     const Color = { color: "#74C043" };
     return (
       <MDBContainer style={Margin}>
-        {this.state.singlecourses.map(({ Heading, titlefirst, descfirst, titlesecond, descsecond, titlethird, descthird }) => (
+        {this.state.singlecourses.map(({ Heading, titlefirst, descfirst, titlesecond, descsecond, titlethird, descthird, image }) => (
         <MDBRow>
           {/* Accordion */}
           <MDBCol md="6" className="my-4">
@@ -90,7 +90,7 @@ class SingleCourse extends React.Component {
           </MDBCol>
           {/* course image */}
           <MDBCol md="6">
-            <img src={Image} className="img-fluid" alt="" />
+            <img src={`http://localhost:1337${image[0].url}`} className="img-fluid" alt="" />
           </MDBCol>
           {/* button back to home */}
         </MDBRow>

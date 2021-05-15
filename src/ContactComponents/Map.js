@@ -44,25 +44,25 @@ class Maps extends React.Component {
           <h1 className="text-center">
             Find Us <span style={Color}> Here</span>
           </h1>
-          {this.state.mapcontents.map(({ first, second, third, fourth }) => (
+          {this.state.mapcontents.map(({ anem, address, contact, email }) => (
           <div className="text-left pl-5 ml-5 mt-5">
             <h5 className="mt-4">
-              <MDBIcon icon="university" style={Color} /> {first}
+              <MDBIcon icon="university" style={Color} /> {anem}
             </h5>
             <h5 className="mt-4">
-              <MDBIcon icon="map-marker-alt" style={Color} /> {second}
+              <MDBIcon icon="map-marker-alt" style={Color} /> {address}
             </h5>
             <h5 className="mt-4">
               <a href="tel:9810000000" style={{ color: "#000000" }}>
                 <MDBIcon icon="phone-alt" style={Color} />
-                {third}
+                {contact}
               </a>
             </h5>
 
             <h5 className="mt-4">
               <a href="mailto:info@hck.edu.np" style={{ color: "#000000" }}>
                 <MDBIcon icon="at" style={Color} />
-                {fourth}
+                {email}
               </a>
             </h5>
           </div>
